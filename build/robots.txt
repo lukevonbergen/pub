@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://theoldswanbeaconsfield.co.uk/sitemap.xml
+
+# Disallow common bot traps and admin areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.env
+Disallow: /node_modules/
+
+# Allow search engines to crawl all main pages
+Allow: /
+Allow: /about
+Allow: /menu
+Allow: /events
+Allow: /book
+Allow: /contact
+
+# Crawl delay for polite bots
+Crawl-delay: 1
