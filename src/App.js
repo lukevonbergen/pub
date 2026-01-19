@@ -1,27 +1,28 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import LiveSport from './pages/LiveSport';
-import Menu from './pages/Menu';
-import WhatsOn from './pages/WhatsOn';
-import PrivateHire from './pages/PrivateHire';
-import Contact from './pages/Contact';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import GroupNavigation from './components/GroupNavigation';
+import GroupFooter from './components/GroupFooter';
+import GroupHome from './pages/GroupHome';
+import PubPage from './pages/PubPage';
+import Locations from './pages/Locations';
 
 function App() {
+  const location = useLocation();
+  const isLocationsPage = location.pathname === '/locations';
+
   return (
     <div className="App">
-      <Navigation />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/live-sport" element={<LiveSport />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/whats-on" element={<WhatsOn />} />
-        <Route path="/private-hire" element={<PrivateHire />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
+      <GroupNavigation />
+      <main className={`main-content ${isLocationsPage ? 'locations-main' : ''}`}>
+        <Routes>
+          <Route path="/" element={<GroupHome />} />
+          <Route path="/locations" element={<Locations />} />
+          <Route path="/pubs/:slug" element={<PubPage />} />
+          <Route path="/pubs/:slug/menus" element={<PubPage />} />
+          <Route path="/pubs/:slug/contact" element={<PubPage />} />
+        </Routes>
+      </main>
+      {!isLocationsPage && <GroupFooter />}
     </div>
   );
 }

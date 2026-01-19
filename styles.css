@@ -1,0 +1,321 @@
+/* Custom Styles for The Crown & Thistle */
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Button Styles */
+.btn-primary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #C4A052;
+    color: white;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 2px solid #C4A052;
+}
+
+.btn-primary:hover {
+    background-color: #A48832;
+    border-color: #A48832;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(196, 160, 82, 0.3);
+}
+
+.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(196, 160, 82, 0.4);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: white;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #1a1f3d;
+    transform: translateY(-2px);
+}
+
+.btn-secondary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+/* Menu Tab Styles */
+.menu-tab {
+    display: inline-block;
+    padding: 0.875rem 1.75rem;
+    border: 2px solid #1a1f3d;
+    border-radius: 0.5rem;
+    color: #1a1f3d;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu-tab:hover {
+    background-color: #1a1f3d;
+    color: white;
+}
+
+.menu-tab.active {
+    background-color: #1a1f3d;
+    color: white;
+}
+
+.menu-tab:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 31, 61, 0.3);
+}
+
+/* Navigation Styles */
+#navbar.scrolled {
+    background-color: #1a1f3d;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#navbar.scrolled .nav-logo-text {
+    color: white;
+}
+
+#navbar.scrolled .nav-link-header {
+    color: white;
+}
+
+#navbar.scrolled .nav-link-header:hover {
+    color: #C4A052;
+}
+
+/* Fade-in Animation for Hero */
+.fade-in {
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll Fade-in Animations */
+.scroll-fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Event Card Hover Effect */
+.event-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* FAQ Accordion Styles */
+.faq-trigger {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-trigger:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.faq-trigger:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px #C4A052;
+    border-radius: 0.5rem;
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.open .faq-content {
+    max-height: 500px;
+}
+
+/* Form Input Styles */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.25rem;
+    padding-right: 3rem;
+}
+
+/* Focus states for accessibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #C4A052;
+    outline-offset: 2px;
+}
+
+/* Image hover effects */
+.scroll-fade-in img {
+    transition: transform 0.5s ease;
+}
+
+.scroll-fade-in:hover img {
+    transform: scale(1.02);
+}
+
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+#mobile-menu.open {
+    max-height: 500px;
+    opacity: 1;
+}
+
+#mobile-menu:not(.hidden) {
+    display: block;
+}
+
+/* Quote marks styling */
+blockquote::before {
+    content: '';
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f3ef;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C4A052;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #A48832;
+}
+
+/* Selection color */
+::selection {
+    background-color: #C4A052;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-tab {
+        flex: 1 1 calc(50% - 0.5rem);
+        text-align: center;
+    }
+}
+
+/* Loading state for images */
+img {
+    background-color: #eae7e0;
+}
+
+/* Print styles */
+@media print {
+    .scroll-fade-in {
+        opacity: 1;
+        transform: none;
+    }
+
+    #navbar,
+    #mobile-menu-btn,
+    .btn-primary,
+    .btn-secondary {
+        display: none;
+    }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .scroll-fade-in {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .btn-primary {
+        border: 3px solid #000;
+    }
+
+    .btn-secondary {
+        border: 3px solid #fff;
+    }
+
+    .menu-tab {
+        border: 3px solid #000;
+    }
+}

@@ -6,12 +6,23 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'serif': ['Sorts Mill Goudy', 'serif'],
+        'serif': ['Playfair Display', 'serif'],
+        'sans': ['Inter', 'sans-serif'],
       },
       colors: {
-        'brand': {
-          'dark': '#2c2c2c',
-          'gray': '#666666'
+        'gold': {
+          DEFAULT: '#C4A052',
+          light: '#D4B872',
+          dark: '#A48832'
+        },
+        'navy': {
+          DEFAULT: '#1a1f3d',
+          light: '#2a3050',
+          dark: '#12152d'
+        },
+        'cream': {
+          DEFAULT: '#f5f3ef',
+          dark: '#eae7e0'
         }
       }
     },
